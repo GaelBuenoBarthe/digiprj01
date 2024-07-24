@@ -30,13 +30,22 @@ class Tick extends React.Component {
         });
     }
 
+    onStop =(e)=> {this.componentWillUnmount()}
+    onStart =(e)=> {this.componentDidMount()}
+
     render () {
-    return (
-        <div>
-            <h1>Horloge</h1>
-            <h2>il est :{new Date().toLocaleTimeString()}.
-            </h2>
-        </div>
+        return (
+            <div className="d-flex justify-content-center flex-column align-items-center">
+                <h1 className="text-center">{this.props.message}</h1>
+                <h2 className="text-center">il est :{new Date().toLocaleTimeString()}.
+                </h2>
+                <div>
+                    <button onClick={this.onStop} className="btn btn-danger">Stop</button>
+                    <button onClick={this.onStart} className="btn btn-primary">Start</button>
+                </div>
+                <br/>
+                <button onClick={this.props.cb} className="btn btn-warning">App</button>
+            </div>
         );
     }
 }

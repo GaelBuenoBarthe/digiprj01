@@ -1,4 +1,4 @@
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import Tick from './Tick';
 
@@ -13,10 +13,13 @@ function Comp01(props) {
 }
 
 function App() {
+  let onCallBack = (e) => {console.log("App: ")}
+
   return (
     <div>
-      <Comp01 message="Digi 01"/>
-      <Tick date={new Date().toLocaleTimeString()}/>
+      <Tick message="Horloge Digi 2024-M05"
+        cb={onCallBack}
+      />
     </div>
   );
 }
