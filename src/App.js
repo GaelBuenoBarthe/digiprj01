@@ -1,6 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import Tick from './Tick';
+import MonForm01 from './MonForm01';
+import MonForm02 from './MonForm02';
 
 
 
@@ -17,9 +18,9 @@ function App() {
 
   return (
     <div>
-      <Tick message="Horloge Digi 2024-M05"
-        cb={onCallBack}
-      />
+      <Comp01 message="Formulaire de saisie V1"/>
+      <MonForm01/>
+      <MonForm02/>
     </div>
   );
 }
